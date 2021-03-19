@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace tannpopo {
+namespace TannpopoWork {
     class Syain : IObserver<Sashimi> {
         public string Name;
         public string Age;
@@ -16,6 +16,10 @@ namespace tannpopo {
         }
 
         public void OnNext(Sashimi value) {
+            OnNextChild(value);
+        }
+
+        protected virtual void OnNextChild(Sashimi value) {
             value.OnTanpopo(this);
         }
     }

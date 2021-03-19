@@ -2,7 +2,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace tannpopo {
+namespace TannpopoWork {
     class Program {
         static void Main(string[] args) {
             Console.WriteLine("終了するには q を押してください。");
@@ -10,9 +10,11 @@ namespace tannpopo {
             var syain1 = new Syain() { Name = "ベテラン社員１", Age = "45" };
             var syain2 = new Syain() { Name = "若手社員2", Age = "19" };
             var syain3 = new Syain() { Name = "再雇用３", Age = "77" };
+            var syain4 = new HakenSyain() { Name = "派遣社員１", Age = "29" };
             factory.Subscribe(syain1);
             factory.Subscribe(syain2);
             factory.Subscribe(syain3);
+            factory.Subscribe(syain4);
 
             var source = new CancellationTokenSource();
             var task = Task.Run(() => {

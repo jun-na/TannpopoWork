@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace tannpopo {
+namespace TannpopoWork {
     class Factory : IObservable<Sashimi> {
         private List<IObserver<Sashimi>> list = new List<IObserver<Sashimi>>();
 
